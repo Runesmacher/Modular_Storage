@@ -25,8 +25,3 @@ To set the interfaces:
 By default the interface will work as an input. To set output items, hover over it while holding the item you want to set and press CONTROL + Z, this will add one stack of that item to the interface when availeble.
 Pressing CONTROL + Z multiple times will add that item again until all slots will have an item set.
 Pressing the keybind with an emty cusor will remove the last item that is set from the interface filter. Note: it will not remove it from the interface itself.
-
-TODO
-------
-*Better textures for all the componts
-*Complete balance of energy/item/research
