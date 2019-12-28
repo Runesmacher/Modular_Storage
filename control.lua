@@ -220,7 +220,7 @@ function cancelBuild(e)
         --Robot placed the item, schedule it for removal
         e.created_entity.order_deconstruction(e.robot.force)      
     else
-        game.players[e.player_index].character.insert({name=e.created_entity.name,count=1})
+        game.players[e.player_index].get_main_inventory().insert({name=e.created_entity.name,count=1})
         e.created_entity.destroy()
     end
 end
