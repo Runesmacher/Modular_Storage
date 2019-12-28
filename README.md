@@ -18,10 +18,12 @@ When adding/removing a tile after a stockpile is placed, the whole stockpile wil
 You can add an inventory pannel to know what is actually stored inside the stockpile and use that in the circuit network.
 
 To set the output items:
-Hover over a belt while holding the item you want to output and press CONTROL + A to set lane 1 and CONTROL + E to set lane 2
+Hover over a belt while holding the item you want to output and press ALT + Q to set lane 1 and ALT + E to set lane 2
 The lanes can be cleared by pressing the keybind with an emty cursor
 
 To set the interfaces:
-By default the interface will work as an input. To set output items, hover over it while holding the item you want to set and press CONTROL + Z, this will add one stack of that item to the interface when availeble.
-Pressing CONTROL + Z multiple times will add that item again until all slots will have an item set.
+By default the interface will work as an input. To set output items, hover over it while holding the item you want to set and press ALT + W, this will add one stack of that item to the interface when availeble.
+Pressing ALT + W multiple times will add that item again until all slots will have an item set.
 Pressing the keybind with an emty cusor will remove the last item that is set from the interface filter. Note: it will not remove it from the interface itself.
+
+Note keybinds for A/Q and Z/W are swapped by default by factorio when using an AZERTY keyboard.
