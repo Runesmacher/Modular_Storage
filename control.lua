@@ -156,6 +156,7 @@ function onEntityBuilt (e)
         if #foundStockpiles == 1 then
             Entity.set_data(en, {enabled = true , items={}})
             Stockpile.addInterface(foundStockpiles[1], en)
+            LOGGER.log("Addding interface to stockPile. interfacecount after add=" .. #foundStockpiles[1].interfaces)
         elseif #foundStockpiles > 1 then
             for i = 2, #foundStockpiles do
                 if foundStockpiles[i] ~= foundStockpiles[i-1] then
@@ -195,6 +196,7 @@ function placeController(e)
         return false
     else
         Stockpiles.add(en)
+        LOGGER.log("Addding controller to stockPile.")
     end
 end
 

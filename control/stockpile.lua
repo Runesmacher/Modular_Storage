@@ -160,6 +160,7 @@ local function removeInterface(en)
 
     if stockpile ~= nil then
         removeElementFromTable(stockpile.interfaces, en)
+        LOGGER.log("Removed interface from stockPile. interface=" .. #stockpile.interfaces)
     end
 end
 Stockpile.removeInterface = removeInterface
@@ -195,7 +196,7 @@ local function checkIOConnected (stockpile,stockpileEntity,positionToCheck)
             if Position.equals(translatedPosition, stockpileEntity.position) then
                 addOutput(stockpile, en)
             end     
-        elseif en.name=="interface" then
+        elseif en.name=="interface" and Stockpiles.getStockpileByEntity(en) == nil then
             addInterface(stockpile, en)
         elseif en.name=="inventory-panel" then
             local translatedPosition = Position.translate(en.position, en.direction, -1)
