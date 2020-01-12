@@ -2,7 +2,8 @@ data:extend({
   {
     type = "recipe",
     name = "controller",
-    enabled = "false",
+    enabled = false,
+    energy_required = 10,
     ingredients = 
     {      
       {"substation",5},
@@ -14,7 +15,8 @@ data:extend({
   {
     type = "recipe",
     name = "stockpileTile",
-    enabled = "false",
+    enabled = false,
+    energy_required = 0.5,
     ingredients = 
     {
       {"steel-chest",1},
@@ -26,6 +28,7 @@ data:extend({
     type = "recipe",
     name = "output",
     enabled = false,
+    energy_required = 5,
     ingredients = {
       {"express-transport-belt",4},
       {"processing-unit",5},
@@ -37,6 +40,7 @@ data:extend({
     type = "recipe",
     name = "input",
     enabled = false,
+    energy_required = 5,
     ingredients = {
       {"express-transport-belt",4},
       {"processing-unit",5},
@@ -48,6 +52,7 @@ data:extend({
     type = "recipe",
     name = "interface",
     enabled = false,
+    energy_required = 5,
     ingredients = {
       {"steel-chest",1},
       {"processing-unit",10},
@@ -59,6 +64,7 @@ data:extend({
     type = "recipe",
     name = "inventory-panel",
     enabled = false,
+    energy_required = 5,
     ingredients =
     {
       {"constant-combinator", 1},
