@@ -388,7 +388,7 @@ local function tick(stockpile,event)
                 end
 
                 if data.item2 ~= "" and data.enabled then
-                    if storedItems[data.item2] == nil then storedItems[data.itesm2] = 0 end --Catch for nil
+                    if storedItems[data.item2] == nil then storedItems[data.item2] = 0 end --Catch for nil
                     -- Fill the belt with selected item
                     line2 = outputs[j].get_transport_line(2)
                     if line2.can_insert_at(0.1) and storedItems[data.item2] > 0 then

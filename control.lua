@@ -134,8 +134,13 @@ function onEntityBuilt (e)
         local positionToSearch = Position.translate(en.position, en.direction, 1)
         local stockpile = Stockpiles.getStockpileAtLocation (en.surface,positionToSearch)
         if stockpile ~= nil then
-            Stockpile.addInput(stockpile,en)
-            LOGGER.log("Addding input to stockPile. inputcount after add=" .. #stockpile.inputs)
+            if beltAdjecentInterfering(en) then
+                setScreenErrorText(en.surface,"text.error-cant-connect-belt",en.position.x,en.position.y)
+                cancelBuild(e)
+            else
+                Stockpile.addInput(stockpile,en)
+                LOGGER.log("Addding input to stockPile. inputcount after add=" .. #stockpile.inputs)
+            end
         else
             setScreenErrorText(en.surface,"text.error-input-must-be-connected-to-stockpile",en.position.x,en.position.y)
             cancelBuild(e)
@@ -144,9 +149,14 @@ function onEntityBuilt (e)
         local positionToSearch = Position.translate(en.position, en.direction, -1)
         local stockpile = Stockpiles.getStockpileAtLocation (en.surface,positionToSearch)
         if stockpile ~= nil then        
-            Entity.set_data(en, {enabled = true , item1="", item2=""})
-            Stockpile.addOutput(stockpile,en)
-            LOGGER.log("Addding output to stockPile. outputcount after add=" .. #stockpile.outputs)
+            if beltAdjecentInterfering(en) then
+                setScreenErrorText(en.surface,"text.error-cant-connect-belt",en.position.x,en.position.y)
+                cancelBuild(e)
+            else
+                Entity.set_data(en, {enabled = true , item1="", item2=""})
+                Stockpile.addOutput(stockpile,en)
+                LOGGER.log("Addding output to stockPile. outputcount after add=" .. #stockpile.outputs)
+            end
         else
             setScreenErrorText(en.surface,"text.error-output-must-be-connected-to-stockpile",en.position.x,en.position.y)
             cancelBuild(e)
@@ -183,7 +193,42 @@ function onEntityBuilt (e)
             setScreenErrorText(en.surface,"text.error-inventory-panel-must-be-connected-to-stockpile",en.position.x,en.position.y)
             cancelBuild(e)
         end
+    elseif en.type=="transport-belt" then
+        local positionToSearch = Position.translate(en.position, en.direction, 1)
+        foundEntities = en.surface.find_entities_filtered({position = positionToSearch})    
+        for _, entity in pairs(foundEntities) do
+            if (entity.name == "input" and en.direction ~= entity.direction) or entity.name == "output" then
+                setScreenErrorText(en.surface,"text.error-cant-connect-belt",en.position.x,en.position.y)
+                cancelBuild(e)
+            end
+        end
     end
+    end
+
+function beltAdjecentInterfering(placedEntity)
+    --Get sideways direction
+    local direction = Direction.next_direction(placedEntity.direction)
+    local positionToSearchPos = Position.translate(placedEntity.position, direction, 1)
+    local positionToSearchNeg = Position.translate(placedEntity.position, direction, -1)
+
+    if isBeltAtPositionAimedAtEntity(placedEntity,positionToSearchPos) then
+        return true
+    end
+    if isBeltAtPositionAimedAtEntity(placedEntity,positionToSearchNeg) then
+        return true
+    end
+
+    return false
+end
+
+function isBeltAtPositionAimedAtEntity(placedEntity,position)
+    foundEntities = placedEntity.surface.find_entities_filtered({position=position,type="transport-belt"})    
+    for _, entity in pairs(foundEntities) do
+        if Position.translate(entity.position, entity.direction, 1) == Position.new(placedEntity.position) then
+            return true
+        end
+    end
+    return false
 end
 
 function placeController(e)
