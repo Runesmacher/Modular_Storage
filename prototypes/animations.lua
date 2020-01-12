@@ -25,17 +25,17 @@ input_animation_set =
   north_index = 3,
   south_index = 4,
   
-  east_to_north_index = 9,
-  north_to_east_index = 9,
+  east_to_north_index = 3,
+  north_to_east_index = 1,
   
-  west_to_north_index = 9,
-  north_to_west_index = 9,
+  west_to_north_index = 3,
+  north_to_west_index = 2,
   
-  south_to_east_index = 9,
-  east_to_south_index = 9,
+  south_to_east_index = 1,
+  east_to_south_index = 4,
   
-  south_to_west_index = 9,
-  west_to_south_index = 9,
+  south_to_west_index = 2,
+  west_to_south_index = 4,
  
   starting_south_index = 5,
   ending_south_index = 9,
@@ -77,17 +77,17 @@ output_animation_set =
   north_index = 3,
   south_index = 4,
   
-  east_to_north_index = 9,
-  north_to_east_index = 9,
+  east_to_north_index = 3,
+  north_to_east_index = 1,
   
-  west_to_north_index = 9,
-  north_to_west_index = 9,
+  west_to_north_index = 3,
+  north_to_west_index = 2,
   
-  south_to_east_index = 9,
-  east_to_south_index = 9,
+  south_to_east_index = 1,
+  east_to_south_index = 4,
   
-  south_to_west_index = 9,
-  west_to_south_index = 9,
+  south_to_west_index = 2,
+  west_to_south_index = 4,
  
   starting_south_index = 9,
   ending_south_index = 5,
