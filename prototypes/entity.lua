@@ -96,7 +96,7 @@ data:extend({
     icon = "__modular_storage__/graphics/icons/stockpile.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 2, result = "stockpileTile"},
+    minable = {mining_time = 0.1, result = "stockpileTile"},
     max_health = 200,
     corpse = "small-remnants",
     collision_box = {{-0.45, -0.45}, {0.45, 0.45}},--{{-0.35, -0.35}, {0.35, 0.35}},
@@ -133,7 +133,7 @@ data:extend({
     order="a-b-c",
     subgroup = "modularStorage"
   },
-  {
+{
     type = "transport-belt",
     name = "output",
     icon = "__modular_storage__/graphics/icons/output.png",
@@ -169,7 +169,7 @@ data:extend({
     circuit_wire_max_distance = transport_belt_circuit_wire_max_distance,
     order="a-b-c",
     subgroup = "modularStorage"
-  }, 
+  },
   {
     type = "transport-belt",
     name = "input",
