@@ -1,8 +1,9 @@
 --control.lua
-require 'stdlib/log/logger'
-require 'stdlib/area/position'
-require 'stdlib/entity/entity'
-require 'stdlib/table'
+Logger = require('__stdlib__/stdlib/misc/logger')
+Position = require('__stdlib__/stdlib/area/position')
+Entity = require('__stdlib__/stdlib/entity/entity')
+table = require('__stdlib__/stdlib/utils/table')
+local Direction = require('__stdlib__/stdlib/area/direction')
 require 'control/stockpiles'
 
 --LOGGER = Logger.new('modular_storage', 'debug', true, { log_ticks = true }) --Instant debug logging

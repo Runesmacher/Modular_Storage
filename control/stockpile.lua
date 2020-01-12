@@ -1,5 +1,3 @@
-require 'stdlib/game'
-
 Stockpile = {}
 
 --[[

@@ -1,9 +1,9 @@
 {
 	"name":"modular_storage",
-	"version":"0.1.6",
+	"version":"0.2.0",
 	"title":"Modular Storage",
 	"author":"Runesmacher",
 	"description":"Modular storage is a storage system that can store and show a lot of resources. and can be imported and exported in multiple ways",
 	"factorio_version": "0.17",
-	"dependencies": ["base >= 0.17.0"]
+	"dependencies": ["base >= 0.17.0","stdlib >= 1.3.0"]
 }
