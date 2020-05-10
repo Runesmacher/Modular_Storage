@@ -1,0 +1,52 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 10. 05. 2020
+  Changes :
+    - Updated to Factorio 0.18
+    - Updated power draw, split up per component
+    - Complete code rewrite and functions overhaul
+    - Stockpile now do a full rescan once no changes happened in the last 30seconds (configurable in settings)
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 12. 01. 2020
+  Changes :
+    - decreased tile mining time
+    - corrected belt interaction
+    - Removed stdlib files from my mod, now depending on the stdlib mod
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 11. 01. 2020
+  Changes :
+    - Fixed issue with multiple tiles connected to an interface
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 28. 12. 2019
+  Changes :
+    - Fixed error when placement of object fails since API update
+    - Changed default keybinds to use ALT
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 21. 03. 2019
+  Changes :
+    - Ported to 0.17
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 21. 01. 2018
+  Changes :
+    - Fixed energy interface being read only
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 18. 01. 2018
+  Changes :
+    - Updated to 0.16.x, tested with 0.16.16
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 14. 10. 2017
+  Changes :
+    - Changed technology logo
+    - Checked and tested with 0.15.36
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 11. 06. 2017
+  Changes :
+    - initial testing

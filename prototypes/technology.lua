@@ -1,33 +1,33 @@
 data:extend({
   {
     type = "technology",
-    name = "stockpile-tech",
+    name = "modular-storage-stockpile-tech",
     icon = "__modular_storage__/graphics/icon.png",
     icon_size = 32,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "controller"
+        recipe = "modular-storage-controller"
       },
       {
         type = "unlock-recipe",
-        recipe = "stockpileTile"
+        recipe = "modular-storage-stockpileTile"
       },
       {
         type = "unlock-recipe",
-        recipe = "output"
+        recipe = "modular-storage-output"
       },
       {
         type = "unlock-recipe",
-        recipe = "input"
+        recipe = "modular-storage-input"
       },
       {
         type = "unlock-recipe",
-        recipe = "interface"
+        recipe = "modular-storage-interface"
       },
       {
         type = "unlock-recipe",
-        recipe = "inventory-panel"
+        recipe = "modular-storage-inventory-panel"
       },
     },
     prerequisites = {

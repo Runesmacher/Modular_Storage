@@ -1,0 +1,33 @@
+{
+    "entity":
+    [
+      ["controller", "modular-storage-controller"],
+      ["stockpileTile", "modular-storage-stockpileTile"],
+      ["output", "modular-storage-output"],
+      ["input", "modular-storage-input"],
+      ["interface", "modular-storage-interface"],
+      ["inventory-panel", "modular-storage-inventory-panel"]
+    ],
+    "item":
+    [
+        ["controller", "modular-storage-controller"],
+        ["stockpileTile", "modular-storage-stockpileTile"],
+        ["output", "modular-storage-output"],
+        ["input", "modular-storage-input"],
+        ["interface", "modular-storage-interface"],
+        ["inventory-panel", "modular-storage-inventory-panel"]
+    ],
+    "recipe":
+    [
+        ["controller", "modular-storage-controller"],
+        ["stockpileTile", "modular-storage-stockpileTile"],
+        ["output", "modular-storage-output"],
+        ["input", "modular-storage-input"],
+        ["interface", "modular-storage-interface"],
+        ["inventory-panel", "modular-storage-inventory-panel"]
+    ],
+    "technology":
+    [
+        ["stockpile-tech", "modular-storage-stockpile-tech"]
+    ]
+  }
